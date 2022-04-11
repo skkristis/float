@@ -22,6 +22,8 @@ div {
   transition-delay: 0.5s;
 }
 a {
+  display: inline-block;
+  position: relative;
   cursor: pointer;
   padding: 0 1px;
   text-decoration: none;
@@ -37,12 +39,12 @@ a::before {
   right: 0;
   background: crimson;
   content: "";
-  transform: translateX(-100%);
+  transform: translateX(-105%);
 
   transition: transform 0.3s;
 }
 a:hover::before {
-  transform: translateX(100%);
+  transform: translateX(105%);
 }
 a::after {
   position: absolute;
@@ -52,10 +54,10 @@ a::after {
   right: 0;
   background: crimson;
   content: "";
-  transform: translateX(100%);
+  transform: translateX(105%);
   transition: transform 0.3s;
+  transition-delay: 0.3s;
 }
 a:hover::after {
-  transition-delay: 0.3s;
   transform: translateX(-2%);
 }
